@@ -84,11 +84,30 @@ The photograph presents rugby as a collision between will and resistance. Its ef
 
 ## Requirements
 
-A signed-in Claude environment that supports custom skills and can read images. This distribution provides a skill ZIP for upload in Claude Chat, Claude Desktop Chat, and Cowork.
+A signed-in environment that supports custom skills and can read images: Codex Desktop, Claude Chat, Claude Desktop Chat, or Cowork. The same skill ZIP supports manual installation in Codex Desktop and account upload in Claude.
 
 PDF creation requires code execution and file creation to be enabled in the host. Visual Analysis uses the host's model and available tools.
 
 ## Installation
+
+### Codex Desktop
+
+1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip).
+2. Extract it. The archive contains a folder named visual-analysis.
+3. Copy that entire folder into your personal skills directory:
+
+| Operating system | Destination |
+| --- | --- |
+| Windows | `C:\Users\<username>\.agents\skills\` |
+| macOS / Linux | `~/.agents/skills/` |
+
+Create the skills directory if it does not exist. The resulting file must be `.agents/skills/visual-analysis/SKILL.md`.
+
+Start a new conversation in Codex Desktop and select Visual Analysis from the skill picker, or type `$visual-analysis`. If the skill does not appear, restart the application.
+
+You can also copy the visual-analysis folder directly from this repository. Keep SKILL.md, agents, and assets together.
+
+### Claude Chat, Desktop Chat, and Cowork
 
 1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip) from the [latest release](https://github.com/paolodalprato/visual-analysis/releases/latest), or use the copy in the repository root.
 2. Keep the ZIP intact.
@@ -98,15 +117,15 @@ PDF creation requires code execution and file creation to be enabled in the host
 
 ## Verify the installation
 
-Start a conversation, attach one image, and ask Claude to use Visual Analysis on it.
+Start a conversation and attach one image. In Codex Desktop, select Visual Analysis or type `$visual-analysis`. In Claude, ask it to use Visual Analysis on the image.
 
 No title, author, camera settings, or other preliminary details are required. The PDF should contain the image and a specific, supported reading of it.
 
 ## Updates and removal
 
-To update the skill, download the latest skill ZIP and upload it through **Customize > Skills**.
+In Codex Desktop, update by replacing the installed visual-analysis folder with the new version. To remove it, remove that folder from your personal skills directory.
 
-To remove the skill, use **Customize > Skills** in your Claude account.
+In Claude, update by uploading the latest skill ZIP through **Customize > Skills**. Remove it through the same settings.
 
 ## Structure
 
@@ -140,6 +159,7 @@ Issues and pull requests are welcome. Useful reports include the host and the be
 
 ## Documentation
 
+- [OpenAI: local skills](https://learn.chatgpt.com/docs/build-skills)
 - [Claude: upload and use custom skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 - [Claude: create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 

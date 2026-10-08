@@ -2,7 +2,7 @@
 
 ## 0.24.4
 
-- Skill distribution through account upload, without local installation scripts.
+- Manual skill installation in Codex Desktop and account upload in Claude, without local installation scripts.
 - English README and skill instructions, with multilingual analysis unchanged.
 - A sports photography example in the README, with the full analysis in an expandable section.
 
