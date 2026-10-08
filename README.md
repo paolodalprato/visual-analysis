@@ -88,8 +88,8 @@ Copy the visual-analysis folder from this repository into the appropriate skills
 
 | Host | Windows | macOS / Linux |
 | --- | --- | --- |
-| Codex | C:\Users\<username>\.agents\skills\ | ~/.agents/skills/ |
-| Claude Code | C:\Users\<username>\.claude\skills\ | ~/.claude/skills/ |
+| Codex | `C:\Users\<username>\.agents\skills\` | ~/.agents/skills/ |
+| Claude Code | `C:\Users\<username>\.claude\skills\` | ~/.claude/skills/ |
 
 Create the skills directory if necessary. The result must be a folder named visual-analysis containing SKILL.md.
 
