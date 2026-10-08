@@ -1,8 +1,8 @@
 # Visual Analysis
 
-A skill for Codex and Claude that produces a deep, curatorial reading of one image and delivers a formatted PDF containing that image.
+A custom skill that produces a deep, curatorial reading of one image and delivers a formatted PDF containing that image.
 
-Current version: 0.24.3. See the [changelog](CHANGELOG.md).
+Current version: 0.24.4. See the [changelog](CHANGELOG.md).
 
 ## What it does
 
@@ -27,131 +27,129 @@ It reads the work as presented. It does not propose retouching, alternate compos
 3. Critical review: checks technical claims, strengths and limits, and the consistency of artistic references.
 4. PDF: produces a sober editorial document with the complete image, the analysis, and a final critical synthesis.
 
-The report follows the language of the request or conversation. English is the fallback when no other language can be determined.
+The report follows the language of the request or conversation. English is the fallback when no other language can be determined. The English source instructions do not restrict the report language.
 
-## Where it works
+## Example: sports photography
 
-| Environment | Installation |
-| --- | --- |
-| Codex desktop, CLI, and IDE extension | Local installer or manual copy |
-| Claude Code | Local installer or manual copy |
-| Claude Chat and Claude Desktop Chat | Upload the skill ZIP to the Claude account |
-| Claude Cowork | Upload the skill ZIP to the Claude account |
+![Rugby players in close contact around the ball](examples/rugby.jpg)
 
-Claude Code's local skills folder does not install a skill into Claude Chat or Cowork. Those environments use skills enabled in the Claude account.
+*Photograph by Paolo Dalprato. English translation of an analysis produced with Visual Analysis.*
+
+### The breaking point
+
+The frame holds a crucial phase of contact in rugby: one player protects the ball against her body while two others close around her from different directions. Her contracted face and tightly held arms register an effort still in progress. We see neither a try nor a completed stop. The question the image opens is concrete: will she break through, or will the combined pressure halt her advance?
+
+The photograph makes this uncertainty visible through bodies converging on the ball, a very close viewpoint that removes the context of the field, and an instant brief enough to leave droplets suspended in the air. Movement is perceptible precisely because it is arrested where the forces oppose each other, before either prevails.
+
+<details>
+<summary>Read the full curatorial analysis</summary>
+
+### Visual hierarchy and the path of the eye
+
+The large red back in the foreground occupies much of the frame and attracts attention through its mass and saturation. The eye then moves to the pale ball, held tightly between the arms, and rises to the ball carrier's face, the most expressive dark profile against the luminous background. From there, the head emerging behind her and the body bent low return the gaze to the center of contact. The ball is the narrative pivot; the face conveys its physical cost.
+
+### Composition and vectors of force
+
+The ball carrier inclines her shoulders and head toward the left, in the direction the edge of the frame intuitively leaves open. The foreground figure enters from the right and below: her curved back forms a broad diagonal that crosses and compresses the central torso. A second presence, high and partly hidden behind the ball carrier, closes the space at her back. The arms surrounding the ball form a knot of short lines, in contrast with the diagonals of the torsos. The composition repeatedly draws the eye back to the point where possession is contested.
+
+### Dynamics and suspense
+
+The ball is still firmly protected, and the carrier's body retains a direction: these are signs of possible forward movement. Yet the other two figures have already reduced her room to maneuver. The foreground player appears to engage the lower body, while the other applies pressure around the shoulders. The image contains signs supporting both outcomes without proving either. The close framing prevents us from seeing foot placement, the field line, or subsequent developments. The viewer feels the urgency of the action while remaining within its present moment.
+
+### Photographic time
+
+The separated droplets, lifted hair, and taut folds of the shirts are traces of motion frozen in place. The photograph does not depict bodies posing; it selects a fraction of a second in which every gesture still seems capable of changing direction. This suspension of time intensifies the question of what happens next.
+
+### Light, color, and material
+
+The light is broad and soft. It produces no sharp shadows, but makes the background and suspended droplets luminous. The edges of the hair receive slight tonal separation, while the face remains relatively darker. This relationship allows the expression to be read without separating it from the physical effort of contact. The mud-marked white panels of the shirts retain the material memory of play. Vivid red binds the figures into a compact mass against the pale greens and grays of the background. Color contrast isolates the action, while the similarity of the shirts makes the bodies less immediately distinguishable.
+
+### Technical reading
+
+The view is tight and at body height, with a strongly blurred background separating the group from its surroundings. The face, ball, and fabric in the central areas retain enough detail to support the reading; the red form at the far right is out of focus. Frozen droplets suggest a short exposure, but shutter speed, aperture, and focal length cannot be recovered from the JPEG alone. The rendering is bright, with luminous whites and intense reds. It cannot confidently be attributed to the scene's lighting, the camera, or later processing. The supplied file measures 1000 x 667 pixels, so the assessment of fine detail is limited to this version.
+
+### Reference and visual language
+
+The image belongs to the language of action sports photography and has a relationship with reportage: a real event is condensed into an instant that is both legible and open. The frame selects a crucial moment, but its strength does not derive from orderly geometry. It arises from the collision of bodies and uncertainty over which force will prevail. The relevant reference is therefore the visual narration of action, without needing to assign the photograph to a particular author or movement.
+
+### Strength and weakness
+
+The strength is the coincidence of visual structure and sporting conflict: diagonals converge on the ball, the face gives human scale to the collision, and the arrested instant keeps the possibility of breaking through or being stopped open. The main limitation is the legibility of the physical relationships. The large foreground figure hides part of the grip, and similar shirts merge the players into a single volume. This opacity conveys the pressure of close contact, but prevents a precise understanding of which gesture will determine the outcome.
+
+### Critical synthesis
+
+The photograph presents rugby as a collision between will and resistance. Its effectiveness lies in making the uncertainty of the outcome felt, and in turning a very brief contact into a scene that continues mentally beyond the frame.
+
+</details>
 
 ## Requirements
 
-An installed, signed-in host that supports custom skills and can read images. PDF creation requires file creation or code execution in that host. In Claude Chat, enable Code execution and file creation.
+A signed-in Claude environment that supports custom skills and can read images. This distribution provides a skill ZIP for upload in Claude Chat, Claude Desktop Chat, and Cowork.
 
-The installer requires no Git, Python, API key, or administrator access. It copies the skill into the selected host's personal skills directory. Visual Analysis uses the host's model and available tools.
+PDF creation requires code execution and file creation to be enabled in the host. Visual Analysis uses the host's model and available tools.
 
 ## Installation
 
-### Option 1: Windows installer
-
-1. Download the repository with **Code > Download ZIP**, or clone it with Git.
-2. Extract the repository ZIP, then open the extracted repository folder.
-3. Double-click install.cmd.
-4. Choose Codex, Claude Code, or both.
-5. Start a new session in the selected application.
-
-For installation from a terminal:
-
-    powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -Target codex
-
-Replace codex with claude or both as needed. The launcher applies its execution policy only to that process.
-
-### Option 2: macOS or Linux installer
-
-Download the repository with **Code > Download ZIP**, or clone it with Git. Open a terminal in the repository folder and run:
-
-    sh install.sh
-
-Choose Codex, Claude Code, or both. A direct command is also available:
-
-    sh install.sh codex
-
-Replace codex with claude or both as needed. Start a new session after installation.
-
-### Option 3: Claude Chat, Desktop Chat, or Cowork
-
-1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip) from Releases, or use the copy in the repository root.
-2. Keep this ZIP intact.
-3. Open Claude and go to Customize > Skills.
-4. Select +, then Create skill, then Upload a skill.
+1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip) from the [latest release](https://github.com/paolodalprato/visual-analysis/releases/latest), or use the copy in the repository root.
+2. Keep the ZIP intact.
+3. Open Claude and go to **Customize > Skills**.
+4. Select **+**, then **Create skill**, then **Upload a skill**.
 5. Upload the ZIP and enable Visual Analysis.
-
-### Option 4: Manual installation or Git clone
-
-Copy the visual-analysis folder from this repository into the appropriate skills directory:
-
-| Host | Windows | macOS / Linux |
-| --- | --- | --- |
-| Codex | `C:\Users\<username>\.agents\skills\` | ~/.agents/skills/ |
-| Claude Code | `C:\Users\<username>\.claude\skills\` | ~/.claude/skills/ |
-
-Create the skills directory if necessary. The result must be a folder named visual-analysis containing SKILL.md.
-
-If the repository was downloaded with GitHub's Code > Download ZIP button, the installers are in the extracted repository root. The skill folder is inside that root.
 
 ## Verify the installation
 
-Start a new session, attach one image, and invoke Visual Analysis. In Codex, select the skill or type $visual-analysis. In Claude Code, use /visual-analysis. In Claude Chat or Cowork, ask Claude to use Visual Analysis on the attached image.
+Start a conversation, attach one image, and ask Claude to use Visual Analysis on it.
 
 No title, author, camera settings, or other preliminary details are required. The PDF should contain the image and a specific, supported reading of it.
 
-## Updates and backups
+## Updates and removal
 
-Download the updated repository, or run Git pull in your clone, then run the installer again. Before replacing an existing visual-analysis folder, it saves that folder under ~/.visual-analysis/backups/. On Windows, this is in the user's profile folder. Backups are outside the skills directories so they do not appear as duplicate skills.
+To update the skill, download the latest skill ZIP and upload it through **Customize > Skills**.
 
-For Claude account skills, upload the new skill ZIP through Customize > Skills.
-
-To remove a local installation, remove only the visual-analysis folder from the selected host's skills directory. Remove an uploaded Claude skill through Customize > Skills.
+To remove the skill, use **Customize > Skills** in your Claude account.
 
 ## Structure
 
     visual-analysis/
-    ├── SKILL.md
-    ├── LICENSE
-    ├── agents/
-    │   └── openai.yaml
-    └── assets/
-        └── icon.png
-    install.cmd
-    install.ps1
-    install.sh
+    |-- SKILL.md
+    |-- LICENSE
+    |-- agents/
+    |   +-- openai.yaml
+    +-- assets/
+        +-- icon.png
+    examples/
+    +-- rugby.jpg
+    visual-analysis-skill.zip
     README.md
     CHANGELOG.md
     LICENSE
 
-The repository contains these files and visual-analysis-skill.zip. The Claude upload archive contains only the visual-analysis skill folder. The release provides that skill ZIP; local installers are distributed as repository source files.
+The upload archive contains only the visual-analysis skill folder. The example photograph and README analysis belong to the repository documentation and are not included in the installed skill.
 
 ## Scope and limitations
 
 The skill can identify visible technical effects, but it cannot reliably recover camera settings, equipment, authorship, or an event's outcome from appearance alone. It distinguishes observations from interpretations.
 
-It contains no user photographs, sample reports, credentials, connectors, or marketplace configuration. It does not upload images itself; the selected host handles the conversation and its attachments.
+The skill contains no user photographs, sample reports, credentials, connectors, or marketplace configuration. It does not upload images itself; the selected host handles the conversation and its attachments.
 
 If the host cannot generate a PDF, Visual Analysis provides the complete analysis in the conversation and explains the file creation limitation.
 
 ## Contributing
 
-Issues and pull requests are welcome. Useful reports include the host, the operating system, and the behavior observed. Image examples should be shared only with the appropriate rights.
+Issues and pull requests are welcome. Useful reports include the host and the behavior observed. Image examples should be shared only with the appropriate rights.
 
 ## Documentation
 
-- [OpenAI: local skills](https://learn.chatgpt.com/docs/build-skills)
-- [Claude Code: skills](https://code.claude.com/docs/en/skills)
 - [Claude: upload and use custom skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
+- [Claude: create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 
 ## License
 
 [MIT](LICENSE). Copyright (c) 2026 Paolo Dalprato.
 
-The license is included in both the repository and the installable skill folder.
+The license is included in both the repository and the skill folder.
 
 ## Authors
 
 - Author: Paolo Dalprato.
-- Co-author: GPT-6 Sol (OpenAI), for the development of the analytical workflow, instructions, and installation package in collaboration with Paolo Dalprato.
+- Co-author: GPT-6 Sol (OpenAI), for the development of the analytical workflow, instructions, and distribution package in collaboration with Paolo Dalprato.

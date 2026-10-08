@@ -1,8 +1,13 @@
 # Changelog
 
+## 0.24.4
+
+- Skill distribution through account upload, without local installation scripts.
+- English README and skill instructions, with multilingual analysis unchanged.
+- A sports photography example in the README, with the full analysis in an expandable section.
+
 ## 0.24.3
 
-- Direct skill distribution for Codex and Claude, with local installers for Windows, macOS, and Linux.
-- Separate upload ZIP for Claude account skills.
+- Initial public skill distribution.
 - Deep curatorial analysis of composition, visual hierarchy, light, color, visible technique, action, strengths, and limits.
 - Consistency review for references, notes, and interpretation.
