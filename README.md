@@ -50,8 +50,8 @@ The installer requires no Git, Python, API key, or administrator access. It copi
 
 ### Option 1: Windows installer
 
-1. Download the installation ZIP from [Releases page](https://github.com/paolodalprato/visual-analysis/releases/latest).
-2. Extract the entire archive.
+1. Download the repository with **Code > Download ZIP**, or clone it with Git.
+2. Extract the repository ZIP, then open the extracted repository folder.
 3. Double-click install.cmd.
 4. Choose Codex, Claude Code, or both.
 5. Start a new session in the selected application.
@@ -64,7 +64,7 @@ Replace codex with claude or both as needed. The launcher applies its execution 
 
 ### Option 2: macOS or Linux installer
 
-Download and extract the installation ZIP. Open a terminal in the extracted folder and run:
+Download the repository with **Code > Download ZIP**, or clone it with Git. Open a terminal in the repository folder and run:
 
     sh install.sh
 
@@ -76,7 +76,7 @@ Replace codex with claude or both as needed. Start a new session after installat
 
 ### Option 3: Claude Chat, Desktop Chat, or Cowork
 
-1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip) from Releases, or use the copy inside the installation archive.
+1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip) from Releases, or use the copy in the repository root.
 2. Keep this ZIP intact.
 3. Open Claude and go to Customize > Skills.
 4. Select +, then Create skill, then Upload a skill.
@@ -103,7 +103,7 @@ No title, author, camera settings, or other preliminary details are required. Th
 
 ## Updates and backups
 
-Download the new installation ZIP and run the installer again. Before replacing an existing visual-analysis folder, it saves that folder under ~/.visual-analysis/backups/. On Windows, this is in the user's profile folder. Backups are outside the skills directories so they do not appear as duplicate skills.
+Download the updated repository, or run Git pull in your clone, then run the installer again. Before replacing an existing visual-analysis folder, it saves that folder under ~/.visual-analysis/backups/. On Windows, this is in the user's profile folder. Backups are outside the skills directories so they do not appear as duplicate skills.
 
 For Claude account skills, upload the new skill ZIP through Customize > Skills.
 
@@ -125,7 +125,7 @@ To remove a local installation, remove only the visual-analysis folder from the 
     CHANGELOG.md
     LICENSE
 
-The installation archive contains these files. The Claude upload archive contains only the visual-analysis skill folder.
+The repository contains these files and visual-analysis-skill.zip. The Claude upload archive contains only the visual-analysis skill folder. The release provides that skill ZIP; local installers are distributed as repository source files.
 
 ## Scope and limitations
 
