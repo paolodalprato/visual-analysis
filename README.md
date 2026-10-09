@@ -1,8 +1,8 @@
 # Visual Analysis
 
-A custom skill that produces a deep, curatorial reading of one image and delivers a formatted PDF containing that image.
+A custom skill that produces an in-depth visual analysis of one image and delivers a formatted PDF containing that image.
 
-Current version: 0.24.4. See the [changelog](CHANGELOG.md).
+Current version: 0.24.5. See the [changelog](CHANGELOG.md).
 
 ## What it does
 
@@ -27,6 +27,8 @@ It reads the work as presented. It does not propose retouching, alternate compos
 3. Critical review: checks technical claims, strengths and limits, and the consistency of artistic references.
 4. PDF: produces a sober editorial document with the complete image, the analysis, and a final critical synthesis.
 
+Each PDF uses "Visual Analysis" as its heading and carries the footer "VISUAL ANALYSIS by Paolo Dalprato" on every page. It does not generate an evocative title for the report or the image. A supplied or verified work title and image credit may appear separately near the image.
+
 The report follows the language of the request or conversation. English is the fallback when no other language can be determined. The English source instructions do not restrict the report language.
 
 ## Example: sports photography
@@ -35,14 +37,14 @@ The report follows the language of the request or conversation. English is the f
 
 *Photograph copyright Paolo Dalprato. All rights reserved; excluded from the MIT license. English translation of an analysis produced with Visual Analysis.*
 
-### The breaking point
+### Rugby photograph analysis
 
 The frame holds a crucial phase of contact in rugby: one player protects the ball against her body while two others close around her from different directions. Her contracted face and tightly held arms register an effort still in progress. We see neither a try nor a completed stop. The question the image opens is concrete: will she break through, or will the combined pressure halt her advance?
 
 The photograph makes this uncertainty visible through bodies converging on the ball, a very close viewpoint that removes the context of the field, and an instant brief enough to leave droplets suspended in the air. Movement is perceptible precisely because it is arrested where the forces oppose each other, before either prevails.
 
 <details>
-<summary>Read the full curatorial analysis</summary>
+<summary>Read the full analysis</summary>
 
 ### Visual hierarchy and the path of the eye
 

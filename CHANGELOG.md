@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.24.5
+
+- Added the fixed footer "VISUAL ANALYSIS by Paolo Dalprato" on every PDF page.
+- Removed generated evocative report titles and curatorial labels from the report presentation; analytical depth is preserved.
 
 - Clarified that the example rugby photograph is copyright Paolo Dalprato, with all rights reserved, and is excluded from the MIT license.
 

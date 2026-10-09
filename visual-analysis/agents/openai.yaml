@@ -1,5 +1,5 @@
 interface:
   display_name: "Visual Analysis"
-  short_description: "Deep curatorial image analysis"
+  short_description: "In-depth image analysis"
   icon_small: "./assets/icon.png"
   icon_large: "./assets/icon.png"
