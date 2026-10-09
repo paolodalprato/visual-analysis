@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Clarified that the example rugby photograph is copyright Paolo Dalprato, with all rights reserved, and is excluded from the MIT license.
+
 ## 0.24.4
 
 - Manual skill installation in Codex Desktop and account upload in Claude, without local installation scripts.

@@ -33,7 +33,7 @@ The report follows the language of the request or conversation. English is the f
 
 ![Rugby players in close contact around the ball](examples/rugby.jpg)
 
-*Photograph by Paolo Dalprato. English translation of an analysis produced with Visual Analysis.*
+*Photograph copyright Paolo Dalprato. All rights reserved; excluded from the MIT license. English translation of an analysis produced with Visual Analysis.*
 
 ### The breaking point
 
@@ -137,6 +137,7 @@ In Claude, update by uploading the latest skill ZIP through **Customize > Skills
     +-- assets/
         +-- icon.png
     examples/
+    |-- README.md
     +-- rugby.jpg
     visual-analysis-skill.zip
     README.md
@@ -165,9 +166,11 @@ Issues and pull requests are welcome. Useful reports include the host and the be
 
 ## License
 
-[MIT](LICENSE). Copyright (c) 2026 Paolo Dalprato.
+The project's software, skill instructions, and associated text documentation are licensed under [MIT](LICENSE). Copyright (c) 2026 Paolo Dalprato.
 
-The license is included in both the repository and the skill folder.
+The example photograph `examples/rugby.jpg` is excluded from the MIT license. Copyright Paolo Dalprato. All rights reserved. It is shown to demonstrate the analysis; its inclusion in this repository does not grant permission to reuse it. Permission for reuse must be obtained separately from Paolo Dalprato. See the [photograph copyright notice](examples/README.md).
+
+The MIT license is included in both the repository and the skill folder. The installable skill ZIP does not contain the photograph.
 
 ## Authors
 
