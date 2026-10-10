@@ -94,6 +94,8 @@ PDF creation requires code execution and file creation to be enabled in the host
 
 ### OpenAI desktop app (Codex and ChatGPT)
 
+The following steps install Visual Analysis as a local skill on your computer. Local skills are selected with `$` in both the Codex and ChatGPT sections of the OpenAI desktop app.
+
 1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip).
 2. Extract it. The archive contains a folder named visual-analysis.
 3. Copy that entire folder into your personal skills directory:
@@ -107,9 +109,9 @@ Create the skills directory if it does not exist. The resulting file must be `.a
 
 Start a new conversation in either the Codex or ChatGPT section of the OpenAI desktop app. Type `$visual-analysis` and select Visual Analysis from the skill picker. If the skill does not appear, restart the application.
 
-The author checked the local skill in a new ChatGPT desktop conversation: typing `$` displayed Visual Analysis with the label "File locale" (the Italian label identifying a local file). If both the local skill and the plugin version appear, choose the local file entry to use the package downloaded from GitHub.
+If both the local skill and an account version appear in the picker, choose the local file entry to use the package downloaded from GitHub.
 
-The `@Visual Analysis` mention can select the plugin version when it is available in the account. The local skill can be selected with `$` in the ChatGPT section of the desktop app without installing that plugin.
+Account skills are selected with `@` and require installation at account level, including through a plugin containing the skill. For example, `@Visual Analysis` selects the account version when it is installed. Copying the folder into `.agents/skills` installs the local skill only. OpenAI describes these separate installation models in its [skill distribution documentation](https://learn.chatgpt.com/docs/enterprise/skills).
 
 You can also copy the visual-analysis folder directly from this repository. Keep SKILL.md, agents, and assets together.
 
