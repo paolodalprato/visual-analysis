@@ -86,13 +86,13 @@ The photograph presents rugby as a collision between will and resistance. Its ef
 
 ## Requirements
 
-A signed-in environment that supports custom skills and can read images: Codex Desktop, Claude Chat, Claude Desktop Chat, or Cowork. The same skill ZIP supports manual installation in Codex Desktop and account upload in Claude.
+A signed-in environment that supports custom skills and can read images: Codex or ChatGPT in the OpenAI desktop app, Claude Chat, Claude Desktop Chat, or Cowork. The same skill ZIP supports local installation in the OpenAI desktop app and account upload in Claude.
 
 PDF creation requires code execution and file creation to be enabled in the host. Visual Analysis uses the host's model and available tools.
 
 ## Installation
 
-### Codex Desktop
+### OpenAI desktop app (Codex and ChatGPT)
 
 1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip).
 2. Extract it. The archive contains a folder named visual-analysis.
@@ -105,7 +105,11 @@ PDF creation requires code execution and file creation to be enabled in the host
 
 Create the skills directory if it does not exist. The resulting file must be `.agents/skills/visual-analysis/SKILL.md`.
 
-Start a new conversation in Codex Desktop and select Visual Analysis from the skill picker, or type `$visual-analysis`. If the skill does not appear, restart the application.
+Start a new conversation in either the Codex or ChatGPT section of the OpenAI desktop app. Type `$visual-analysis` and select Visual Analysis from the skill picker. If the skill does not appear, restart the application.
+
+The author checked the local skill in a new ChatGPT desktop conversation: typing `$` displayed Visual Analysis with the label "File locale" (the Italian label identifying a local file). If both the local skill and the plugin version appear, choose the local file entry to use the package downloaded from GitHub.
+
+The `@Visual Analysis` mention can select the plugin version when it is available in the account. The local skill can be selected with `$` in the ChatGPT section of the desktop app without installing that plugin.
 
 You can also copy the visual-analysis folder directly from this repository. Keep SKILL.md, agents, and assets together.
 
@@ -119,13 +123,13 @@ You can also copy the visual-analysis folder directly from this repository. Keep
 
 ## Verify the installation
 
-Start a conversation and attach one image. In Codex Desktop, select Visual Analysis or type `$visual-analysis`. In Claude, ask it to use Visual Analysis on the image.
+Start a conversation and attach one image. In either the Codex or ChatGPT section of the OpenAI desktop app, type `$visual-analysis` and select the local file entry. In Claude, ask it to use Visual Analysis on the image.
 
 No title, author, camera settings, or other preliminary details are required. The PDF should contain the image and a specific, supported reading of it.
 
 ## Updates and removal
 
-In Codex Desktop, update by replacing the installed visual-analysis folder with the new version. To remove it, remove that folder from your personal skills directory.
+For the local skill in the OpenAI desktop app, update by replacing the installed visual-analysis folder with the new version. To remove it, remove that folder from your personal skills directory.
 
 In Claude, update by uploading the latest skill ZIP through **Customize > Skills**. Remove it through the same settings.
 
