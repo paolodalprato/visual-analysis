@@ -86,7 +86,7 @@ The photograph presents rugby as a collision between will and resistance. Its ef
 
 ## Requirements
 
-A signed-in environment that supports custom skills and can read images: Codex or ChatGPT in the OpenAI desktop app, Claude Chat, Claude Desktop Chat, or Cowork. The same skill ZIP supports local installation in the OpenAI desktop app and account upload in Claude.
+A signed-in environment that supports custom skills and can read images: Codex or ChatGPT in the OpenAI desktop app, Claude Chat on the web, Claude Desktop Chat, or Cowork. The same skill ZIP supports local installation in the OpenAI desktop app and account upload in Claude.
 
 PDF creation requires code execution and file creation to be enabled in the host. Visual Analysis uses the host's model and available tools.
 
@@ -109,23 +109,23 @@ Create the skills directory if it does not exist. The resulting file must be `.a
 
 Start a new conversation in either the Codex or ChatGPT section of the OpenAI desktop app. Type `$visual-analysis` and select Visual Analysis from the skill picker. If the skill does not appear, restart the application.
 
-If both the local skill and an account version appear in the picker, choose the local file entry to use the package downloaded from GitHub.
-
 Account skills are selected with `@` and require installation at account level, including through a plugin containing the skill. For example, `@Visual Analysis` selects the account version when it is installed. Copying the folder into `.agents/skills` installs the local skill only. OpenAI describes these separate installation models in its [skill distribution documentation](https://learn.chatgpt.com/docs/enterprise/skills).
 
 You can also copy the visual-analysis folder directly from this repository. Keep SKILL.md, agents, and assets together.
 
-### Claude Chat, Desktop Chat, and Cowork
+### Claude (web, Desktop Chat, and Cowork)
+
+The following steps install Visual Analysis in your Claude account. Once uploaded and enabled, the skill is available in both the web interface and Claude Desktop when you sign in with the same account. You only need to upload it once.
 
 1. Download [visual-analysis-skill.zip](https://github.com/paolodalprato/visual-analysis/releases/latest/download/visual-analysis-skill.zip) from the [latest release](https://github.com/paolodalprato/visual-analysis/releases/latest), or use the copy in the repository root.
 2. Keep the ZIP intact.
-3. Open Claude and go to **Customize > Skills**.
+3. Open Claude on the web or in the desktop app and go to **Customize > Skills**.
 4. Select **+**, then **Create skill**, then **Upload a skill**.
 5. Upload the ZIP and enable Visual Analysis.
 
 ## Verify the installation
 
-Start a conversation and attach one image. In either the Codex or ChatGPT section of the OpenAI desktop app, type `$visual-analysis` and select the local file entry. In Claude, ask it to use Visual Analysis on the image.
+Start a conversation and attach one image. In either the Codex or ChatGPT section of the OpenAI desktop app, type `$visual-analysis` and select the local file entry. In Claude on the web or in the desktop app, ask it to use Visual Analysis on the image.
 
 No title, author, camera settings, or other preliminary details are required. The PDF should contain the image and a specific, supported reading of it.
 
@@ -133,7 +133,7 @@ No title, author, camera settings, or other preliminary details are required. Th
 
 For the local skill in the OpenAI desktop app, update by replacing the installed visual-analysis folder with the new version. To remove it, remove that folder from your personal skills directory.
 
-In Claude, update by uploading the latest skill ZIP through **Customize > Skills**. Remove it through the same settings.
+In Claude, update the account skill by uploading the latest skill ZIP through **Customize > Skills**. Remove it through the same settings. These changes apply to both the web interface and the desktop app for that account.
 
 ## Structure
 
@@ -169,6 +169,7 @@ Issues and pull requests are welcome. Useful reports include the host and the be
 ## Documentation
 
 - [OpenAI: local skills](https://learn.chatgpt.com/docs/build-skills)
+- [Claude: skills on web and Desktop](https://academy.claude.com/tutorials/navigating-the-claude-desktop-app)
 - [Claude: upload and use custom skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 - [Claude: create custom skills](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
 
